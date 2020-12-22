@@ -52,7 +52,7 @@ public class BaseTest extends TestCase {
 
         try {
             ConfigUtil.readConfig(config);
-            ConfigUtil.setCmd("ws_user_info");
+            ConfigUtil.setCmd("buyer");
             ConfigUtil.setCurrentDb("westockcore");
             //ConfigUtil.setCmd("dc_per_account_dept_role");
            // ConfigUtil.setCmd("fp_oac_ast_attr_000");

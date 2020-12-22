@@ -1,7 +1,6 @@
 package com.dalgen.mybatis.enums;
 
 import com.dalgen.mybatis.exception.DalgenException;
-import org.apache.commons.lang.StringUtils;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -25,7 +24,7 @@ public enum TypeMapEnum {
     /**
      * Numeric type map enum.
      */
-    NUMERIC("NUMERIC", "java.math.BigDecimal"), //    NUMERIC	java.math.BigDecimal
+    NUMERIC("NUMERIC", "io.vertx.sqlclient.data.Numeric"), //    NUMERIC	java.math.BigDecimal
     /**
      * Decimal type map enum.
      */
@@ -33,15 +32,15 @@ public enum TypeMapEnum {
     /**
      * Bit type map enum.
      */
-    BIT("BIT", "Boolean"), //    BIT	Boolean
+    BIT("BIT", "java.lang.Long"), //    BIT	Boolean
     /**
      * Tinyint type map enum.
      */
-    TINYINT("TINYINT", "Integer"), //    TINYINT	Integer
+    TINYINT("TINYINT", "java.lang.Byte"), //    TINYINT	Integer
     /**
      * Smallint type map enum.
      */
-    SMALLINT("SMALLINT", "Integer"), //    SMALLINT	Integer
+    SMALLINT("SMALLINT", "java.lang.Short"), //    SMALLINT	Integer
 
     /**
      * Int type map enum.
@@ -63,7 +62,7 @@ public enum TypeMapEnum {
     /**
      * Float type map enum.
      */
-    FLOAT("FLOAT", "Double"), //    FLOAT	Double
+    FLOAT("FLOAT", "Float"), //    FLOAT	Double
     /**
      * Double type map enum.
      */
@@ -71,11 +70,11 @@ public enum TypeMapEnum {
     /**
      * Binary type map enum.
      */
-    BINARY("BINARY", "byte"), //    BINARY	byte
+    BINARY("BINARY", "io.vertx.core.buffer.Buffer"), //    BINARY	byte
     /**
      * Varbinary type map enum.
      */
-    VARBINARY("VARBINARY", "byte"), //    VARBINARY	byte
+    VARBINARY("VARBINARY", "io.vertx.core.buffer.Buffer"), //    VARBINARY	byte
     /**
      * Longvarbinary type map enum.
      */
@@ -83,19 +82,19 @@ public enum TypeMapEnum {
     /**
      * Date type map enum.
      */
-    DATE("DATE", "java.sql.Date"), //    DATE	java.sql.Date
+    DATE("DATE", "java.time.LocalDate"), //    DATE	java.sql.Date
     /**
      * Time type map enum.
      */
-    TIME("TIME", "java.sql.Time"), //    TIME	java.sql.Time
+    TIME("TIME", "java.time.Duration"), //    TIME	java.sql.Time
     /**
      * Datetime type map enum.
      */
-    DATETIME("TIMESTAMP", "java.sql.Time"), //    TIME	java.sql.Time
+    DATETIME("DATETIME", "java.time.LocalDateTime"), //    TIME	java.sql.Time
     /**
      * Timestamp type map enum.
      */
-    TIMESTAMP("TIMESTAMP", "java.sql.Timestamp"), //    TIMESTAMP	java.sql.Timestamp
+    TIMESTAMP("TIMESTAMP", "java.time.LocalDateTime"), //    TIMESTAMP	java.sql.Timestamp
 
     OTHER("other", "other");
 
