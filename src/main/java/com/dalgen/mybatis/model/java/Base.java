@@ -34,6 +34,16 @@ public class Base {
      */
     private String       tableName;
 
+    private String javaName;
+
+    public String getJavaName() {
+        return javaName;
+    }
+
+    public void setJavaName(String javaName) {
+        this.javaName = javaName;
+    }
+
     /**
      * The Import lists.
      */

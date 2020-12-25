@@ -305,6 +305,7 @@ public class DalgenLoader extends AbstractDalgenLoader {
                                  Map<String, ResultMap> resultMaps) {
         DOMapper doMapper = new DOMapper();
         doMapper.setClassName(doClass.getClassName() + "Mapper");
+        doMapper.setJavaName(table.getJavaName());
         doMapper.setPackageName(ConfigUtil.getCurrentDb().getGenPackage() + ".mapper");
         doMapper.setClassPath(ConfigUtil.getCurrentDb().getGenPackagePath() + "/mapper");
         doMapper.setDesc(cfTable.getRemark());
